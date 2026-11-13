@@ -37,22 +37,7 @@ This project demonstrates the integration of ARM7 peripherals and embedded C pro
 - Develop a modular embedded C application.
 
 ## 🖼️ Block Diagram
-
-```text
-             LPC2148 ARM7
-                   |
-       -------------------------
-       |           |           |
-      LCD        Keypad       RTC
-       |           |           |
-       -------------------------
-                   |
-             Main Controller
-                   |
-       -------------------------
-       |           |           |
-      LEDs       Buzzer    Train Database
-```
+![Smart Railway Platform Announcement System](system_block_diagram.png)
 
 ## 🏗️ System Architecture
 
@@ -81,11 +66,11 @@ This project demonstrates the integration of ARM7 peripherals and embedded C pro
 | Push Buttons | External interrupt input |
 
 ## 💻 Software Requirements
-
-- Keil µVision IDE
-- Embedded C
-- LPC2148 ARM7 microcontroller
-- Flash Magic (for programming)
+| Software | Purpose|
+| ------------ | ----------- |
+| Keil µVision | Development / Build |
+| Embedded C | Programming |
+| Flash Magic | Programming the LPC2148 |
 
 ## 📂 Repository Structure
 
@@ -149,11 +134,11 @@ Smart-Railway-Platform-Announcement-System/
 
 ## 📈 Future Enhancements
 
-- Add recorded voice announcements using an audio module.
-- Integrate wireless communication for train information updates.
-- Add non-volatile memory for storing train details.
-- Develop a mobile application.
-- Integrate real-time railway schedule information.
+- 🔊 Implement voice-based train announcements.
+- 📡 Add wireless communication for real-time train updates.
+- 💾 Store train information in non-volatile memory.
+- 📱 Develop a mobile application for passenger notifications.
+- 🚆 Integrate real-time train scheduling and tracking.
 
 ## 👤 Author
 
@@ -161,4 +146,4 @@ Smart-Railway-Platform-Announcement-System/
 
 Electronics and Communication Engineering (ECE)
 
-**Technologies:** Embedded C | ARM7 | LPC2148 | RTC | LCD | Keypad Interfacing
+**Technologies:** Embedded C | ARM7 | RTC | LCD | Keypad Interfacing
