@@ -37,7 +37,6 @@ This project demonstrates the integration of ARM7 peripherals and embedded C pro
 - Develop a modular embedded C application.
 
 ## 🖼️ Block Diagram
-## Block Diagram
 
 ![Block Diagram](./system_block_diagram.png)
 
