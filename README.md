@@ -40,6 +40,52 @@ This project demonstrates the integration of ARM7 peripherals and embedded C pro
 
 ![Block Diagram](./system_block_diagram.png)
 
+## 🧩 Block Diagram Explanation
+
+The Smart Railway Platform Announcement System is developed using the LPC2148 ARM7 microcontroller. The LPC2148 acts as the main controller and coordinates all the input and output devices.
+
+### 1. LPC2148 ARM7 Microcontroller
+- Acts as the main controller of the entire system.
+- Receives input from the keypad and external interrupt switch.
+- Processes train details and compares train timings with the current RTC time.
+- Controls the LCD, LEDs, and buzzer.
+
+### 2. Keypad
+- Used to enter and modify train information.
+- Allows the administrator to select menu options.
+- Used to update RTC and train details through Admin Mode.
+
+### 3. External Interrupt Switch
+- Connected to the EINT0 pin of the LPC2148.
+- Generates an external interrupt when the switch is pressed.
+- Activates Admin Mode for editing RTC and train information.
+
+### 4. Real-Time Clock (RTC)
+- Maintains the current time and date.
+- Provides hours, minutes, seconds, date, month, and year.
+- The controller uses RTC information to compare current time with train schedules.
+
+### 5. LCD Display
+- Displays train number and train name.
+- Displays destination and platform number.
+- Displays train arrival and departure timings.
+- Also displays current date and time.
+
+### 6. LED Indicators
+Three LEDs are used to indicate train status:
+
+- 🟡 **Yellow LED:** Indicates that a train is approaching, within 5 minutes of arrival.
+- 🟢 **Green LED:** Indicates that the train is present on the platform.
+- 🔴 **Red LED:** Indicates train delay or recently modified train information.
+
+### 7. Buzzer
+- Provides an audio alert before train arrival.
+- Generates three beep signals when the train is 5 minutes away from its scheduled arrival.
+
+### 8. Train Database
+- Stores train number, train name, destination, platform number, arrival time, departure time, and delay information.
+- Provides train details to the main controller for processing and display.
+
 ## 🏗️ System Architecture
 
 | Module | Function |
