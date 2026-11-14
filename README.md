@@ -22,14 +22,23 @@ The controller continuously compares the on-chip RTC time against a stored train
 
 ## 🎯 Objectives
 ✅ Display the current date and time obtained from the RTC on the LCD.
+
 ✅ Allow train schedule entry and editing using a 4×4 matrix keypad.
+
 ✅ Store multiple train arrival and departure timings.
+
 ✅ Continuously compare the RTC time with the scheduled train timings.
+
 ✅ Automatically display upcoming train information on the LCD.
+
 ✅ Indicate train delays by comparing scheduled and updated timings.
+
 ✅ Provide LED indications representing train status (On-Time, Approaching, Delayed).
+
 ✅ Allow authorized editing of train schedules through the keypad.
+
 ✅ Automatically update the platform display based on the RTC.
+
 ✅ Reduce manual intervention and improve passenger information accuracy.
 
 ## 🖼️ Block Diagram
