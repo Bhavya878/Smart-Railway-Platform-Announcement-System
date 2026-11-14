@@ -16,31 +16,26 @@
 
 ## 📌 Project Overview
 
-The Smart Railway Platform Announcement System is an embedded systems project developed using the **LPC2148 ARM7 microcontroller**.
+This project implements a Smart Railway Platform Clock & Announcement Controller on an LPC2148 (ARM7TDMI-S) microcontroller.The system automatically manages train schedule monitoring, real-time clock synchronization, delay indication, and passenger information display — reducing manual station-announcement effort and improving the accuracy of passenger information.
 
-The system is designed to provide railway platform information using an LCD display, keypad-based user interaction, Real-Time Clock (RTC), LED indications, and buzzer alerts.
-
-The LPC2148 acts as the main controller and manages train-related information through a train database. The LCD displays the relevant information, while the keypad allows user interaction.
-
-This project demonstrates the integration of ARM7 peripherals and embedded C programming to develop a railway platform information and announcement system.
+The controller continuously compares the on-chip RTC time against a stored train schedule database and automatically updates the LCD dashboard, status LEDs, and buzzer without requiring operator intervention. An administrator can pause normal operation at any time (via an interrupt-driven edit switch) to correct the RTC or amend a train's schedule using a 4×4 matrix keypad, then resume live monitoring — no system restart required..
 
 ## 🎯 Objectives
 
-- Develop a railway platform information system using LPC2148.
-- Display real-time date and time using RTC.
-- Provide keypad-based user interaction.
-- Display train-related information on LCD.
-- Manage train details using a train database.
-- Provide visual indications using LEDs.
-- Generate buzzer alerts.
-- Implement external interrupt handling.
-- Develop a modular embedded C application.
+✅ Display the current date and time obtained from the RTC on the LCD.
+✅ Allow train schedule entry/editing using a 4×4 matrix keypad.
+✅ Store multiple train arrival and departure timings.
+✅ Continuously compare the RTC time with the scheduled train timings.
+✅ Automatically display the upcoming train information on the LCD.
+✅ Indicate train delays by comparing scheduled vs. updated timings.
+✅ Provide LED indications representing train status (On-Time, Approaching, Delayed).
+✅ Allow authorized editing of train schedules through the keypad.
+✅ Automatically update the platform display based on the RTC.
+✅ Reduce manual intervention and improve passenger information accuracy.
 
 ## 🖼️ Block Diagram
 
 ![Block Diagram](./system_block_diagram.png)
-
-## 🧩 Block Diagram Explanation
 
 The Smart Railway Platform Announcement System is developed using the LPC2148 ARM7 microcontroller. The LPC2148 acts as the main controller and coordinates all the input and output devices.
 
